@@ -13,13 +13,16 @@ h1 {
   font-size: 22px;
   text-align: center;
 }
+
+span{
+  color: black;
+}
 /* Main grid layout for buttons */
 .grid-container {
   justify-content: space-evenly;
   justify-items: center;
   align-content: space-evenly;
   align-items: center;
-
   margin: auto;
   width: 15em;
   height: 15em;
@@ -29,44 +32,57 @@ h1 {
   padding: 20px;
 }
 
-
+/* Button container styling */
 .grid-item button {
+  position: relative; /* Allow positioning of inner elements */
   margin: auto;
-
-  width: 3em; /* Fixed width */
-  height: 3em; /* Fixed height */
-  border: 3px solid green;
-  text-align: center;
-  padding: 20px;
-  font-size: 16px;
-  background-color: #007bff;
-  color: white;
+  width: 5em; /* Adjust the size of the button */
+  height: 5em;
   border: none;
   cursor: pointer;
   border-radius: 50%;
+  background-color: transparent; /* Transparent to show SVG only */
+  overflow: hidden; /* Ensure no overflow beyond the button */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.grid-item button:hover {
-  background-color: #0056b3;
-}
-
-.grid-item button {
-  margin: auto;
+/* SVG styling */
+.grid-item button img {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
+  object-fit: contain; /* Scale SVG properly */
+  z-index: 1; /* Ensure SVG is behind the text */
+}
+
+
+.grid-item button span {
+  position: absolute;
+  z-index: 2; /* Place text above the SVG */
+  font-size: 1.5em; /* Adjust text size */
+  font-weight: bold;
+  color: rgb(11, 2, 2); /* Contrasting color for better visibility */
   text-align: center;
-  padding: 20px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-  border-radius: 50%;
-  background-color: transparent; 
+  pointer-events: none; /* Ensure text is not clickable */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Ensure perfect centering */
 }
 
-
-/*.grid-item button:hover {
-  background-color: #0056b3;
+lol {
+  position: absolute; /* Overlays the number on top of the SVG */
+  z-index: 999; /* Places number above the SVG */
+  font-size: 1.5em; /* Adjust text size */
+  font-weight: bold; /* Make number bold */
+  color: rgb(185, 31, 31); /* Contrasting text color */
+  text-align: center;
+  pointer-events: none; /* Make number non-clickable */
 }
+
 
 /* Popup overlay styling */
 .popup-overlay {
@@ -129,3 +145,5 @@ h1 {
   overflow: hidden;
   background-position: bottom;
 }
+
+
