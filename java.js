@@ -1,7 +1,8 @@
-function togglePopup(){
+function togglePopup( LOL){
     document.getElementById("popup-1").classList.toggle("active");
 }
-function togglePopup() {
+function togglePopup( LOL) {
+
     const popup = document.getElementById('popup');
     const overlay = document.getElementById('popupOverlay');
     popup.classList.toggle('active');
