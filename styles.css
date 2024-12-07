@@ -1,18 +1,21 @@
 body {
 
-  background: linear-gradient(#4c7564 0%, #698a7c 5%, #adcabd 50%);
+  background: linear-gradient(#3e5964 0%, #566c75 25%, #77878e 50%);
   font-family: "Anonymous Pro";
   font-size: 24px;
   margin: 0;
   padding: 0;
   background-color: #f4f4f4;
-  justify-cintent: flex-start;
+  justify-content: flex-start;
 }
 
 h1 {
   font-family: "Krona One";
-  font-size: 22px;
+  font-size: 64px;
   text-align: center;
+  padding-top: 40px;
+  padding-bottom: 60px;
+  color: #ffffff;
 }
 
 span{
@@ -25,7 +28,7 @@ span{
   align-content: space-evenly;
   align-items: center;
   margin: auto;
-  width: 20em;
+  width: auto;
   height: 20em;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -37,8 +40,8 @@ span{
 .grid-item button {
   position: relative; /* Allow positioning of inner elements */
   margin: auto;
-  width: 5em; /* Adjust the size of the button */
-  height: 5em;
+  width: 10em; /* Adjust the size of the button */
+  height: 10em;
   border: none;
   cursor: pointer;
   border-radius: 50%;
@@ -64,9 +67,9 @@ span{
 .grid-item button span {
   position: absolute;
   z-index: 2; /* Place text above the SVG */
-  font-size: 1.5em; /* Adjust text size */
+  font-size: 3em; /* Adjust text size */
   font-weight: bold;
-  color: rgb(11, 2, 2); /* Contrasting color for better visibility */
+  color: rgb(54, 59, 78); /* Contrasting color for better visibility */
   text-align: center;
   pointer-events: none; /* Ensure text is not clickable */
   top: 50%; /* Center vertically */
@@ -79,16 +82,6 @@ span{
   text-allgin: left;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-
-lol {
-  position: absolute; /* Overlays the number on top of the SVG */
-  z-index: 999; /* Places number above the SVG */
-  font-size: 1.5em; /* Adjust text size */
-  font-weight: bold; /* Make number bold */
-  color: rgb(185, 31, 31); /* Contrasting text color */
-  text-align: center;
-  pointer-events: none; /* Make number non-clickable */
 }
 
 
@@ -142,15 +135,11 @@ lol {
   background-color: #a71d2a;
 }
 
-.grad {
-  background-image: linear-gradient(to bottom right, rgba(97, 131, 97, 0.975), rgb(190, 190, 170)0, 200, 180);
-}
-
 .trees img {
+  padding-top: 100px;
+  vertical-align: bottom;
   width: 100%;
-  height: 200;
-  overflow: hidden;
-  background-position: bottom;
+  height: auto;
 }
 
 
