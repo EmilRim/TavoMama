@@ -117,8 +117,42 @@ span{
   z-index: 1000;
   width: 50%;
   height: 75%;
+}
 
+.popup-grid-container {
+
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-template-columns: 1fr;
+  place-items: center;
+}
+
+.popup-title {
   text-align: center;
+  max-height: 75px;
+  font-size: 36px;
+  padding: 10px;
+  text-align: left;
+  margin-left: -60px;
+}
+.popup-text {
+  width: 600px;
+  padding: 10px;
+  font-size: 20px;
+  text-align: left;
+}
+.popup-img {
+  margin-left: 60px;
+  max-height: 300px;
+  max-width: 350px;
+  object-fit: contain;
+  padding: 10px;
+  text-align: left;
+}
+.popup-button {
+  margin-left: 60px;
+  padding: 10px;
+  text-align: left;
 }
 
 .popup.active {
