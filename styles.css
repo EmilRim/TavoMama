@@ -103,17 +103,21 @@ span{
 
 /* Popup box styling */
 .popup {
-  display: none;
+  display: none; /* Hide by default */
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: white;
+  background: url('popup.svg') no-repeat center center;
+  background-size: contain;
+  background-repeat: no-repeat;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  /*box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);*/
   z-index: 1000;
-  max-width: 300px;
+  width: 50%;
+  height: 75%;
+
   text-align: center;
 }
 
