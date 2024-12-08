@@ -113,45 +113,51 @@ span{
   background-repeat: no-repeat;
   padding: 20px;
   border-radius: 8px;
-  /*box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);*/
   z-index: 1000;
-  width: 50%;
-  height: 75%;
+  
+  /* Make the popup responsive */
+  width: 80%;  /* 80% of the viewport width */
+  max-width: 600px;  /* Set a maximum width */
+  height: 75%;  /* 75% of the viewport height */
+  max-height: 500px; /* Set a maximum height */
+  
+  /* Optional: Use `min-width` and `min-height` to prevent it from being too small */
+  min-width: 300px;
+  min-height: 300px;
 }
 
 .popup-grid-container {
-
   display: grid;
   grid-template-rows: auto auto auto;
   grid-template-columns: 1fr;
   place-items: center;
+  min-height: 200px; /* Add minimum height */
 }
 
 .popup-title {
-  text-align: center;
-  max-height: 75px;
-  font-size: 36px;
+  text-align: left;
+  font-size: 2.5vw; /* Adjust font size relative to viewport width */
+  max-height: 5vw;
   padding: 10px;
   text-align: left;
-  margin-left: -60px;
+  margin-left: -2vw;
 }
 .popup-text {
-  width: 600px;
-  padding: 10px;
-  font-size: 20px;
+  width: 35vw;
+  max-height: 30vw;
+  overflow: hidden;  /* Hides overflowing text */
+  font-size: 1.2vw;
   text-align: left;
 }
 .popup-img {
-  margin-left: 60px;
-  max-height: 300px;
-  max-width: 350px;
+  margin-left: 5vw;
+  max-height: 15vw;
+  max-width: 17vw;
   object-fit: contain;
-  padding: 10px;
   text-align: left;
 }
 .popup-button {
-  margin-left: 60px;
-  padding: 10px;
+  margin-left: 2vw;
   text-align: left;
 }
 
