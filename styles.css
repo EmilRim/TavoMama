@@ -21,46 +21,48 @@ h1 {
 span{
   color: black;
 }
+
 /* Main grid layout for buttons */
 .grid-container {
-  justify-content: space-evenly;
-  justify-items: center;
-  align-content: space-evenly;
-  align-items: center;
-  margin: auto;
-  width: auto;
-  height: 20em;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 50px;
   padding: 20px;
+  width: 80%; /* containers width */
+  max-width: 1000px; /* kad neissiplestu per daug */
+  height: 20em;
+  margin: 0 auto; /* sucentruoja horizontaliai */
+  justify-content: space-evenly;
+  justify-items: center;
+  align-content: space-evenly;
 }
 
-/* Button container styling */
+
+/* button'o styling */
 .grid-item button {
-  position: relative; /* Allow positioning of inner elements */
+  position: relative;
   margin: auto;
-  width: 10em; /* Adjust the size of the button */
-  height: 10em;
+  width: 8em; /* snowball dydis */
+  height: 8em;
   border: none;
   cursor: pointer;
   border-radius: 50%;
-  background-color: transparent; /* Transparent to show SVG only */
-  overflow: hidden; /* Ensure no overflow beyond the button */
+  background-color: transparent; 
+  overflow: hidden; 
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* SVG styling */
+/* SVG style*/
 .grid-item button img {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: contain; /* Scale SVG properly */
-  z-index: 1; /* Ensure SVG is behind the text */
+  object-fit: contain; 
+  z-index: 1; 
 }
 
 
