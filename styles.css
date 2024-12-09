@@ -1,7 +1,6 @@
 body {
 
-  background: linear-gradient(#3e5964 0%, #566c75 25%, #77878e 50%);
-  font-family: "Anonymous Pro";
+  background: linear-gradient(#6E8D97 0%, #C3D0D5 40%, #DEE4E6 100%);
   font-size: 24px;
   margin: 0;
   padding: 0;
@@ -10,16 +9,12 @@ body {
 }
 
 h1 {
-  font-family: "Krona One";
-  font-size: 64px;
+  font-family: Palatino, sans-serif;
+  font-size: 84px;
   text-align: center;
   padding-top: 40px;
   padding-bottom: 60px;
   color: #ffffff;
-}
-
-span{
-  color: black;
 }
 
 /* Main grid layout for buttons */
@@ -68,10 +63,11 @@ span{
 
 .grid-item button span {
   position: absolute;
+  font-family: 'Courier New', monospace;;
   z-index: 2; /* Place text above the SVG */
-  font-size: 3em; /* Adjust text size */
+  font-size: 2.3em; /* Adjust text size */
   font-weight: bold;
-  color: rgb(54, 59, 78); /* Contrasting color for better visibility */
+  color: rgb(33, 84, 108); /* Contrasting color for better visibility */
   text-align: center;
   pointer-events: none; /* Ensure text is not clickable */
   top: 50%; /* Center vertically */
