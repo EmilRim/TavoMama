@@ -30,6 +30,7 @@ h1 {
   justify-content: space-evenly;
   justify-items: center;
   align-content: space-evenly;
+  z-index: 2;
 }
 
 
@@ -47,6 +48,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+
 }
 
 /* SVG style*/
@@ -57,14 +59,14 @@ h1 {
   width: 100%;
   height: 100%;
   object-fit: contain; 
-  z-index: 1; 
+  z-index: 2; 
 }
 
 
 .grid-item button span {
   position: absolute;
   font-family: 'Courier New', monospace;;
-  z-index: 2; /* Place text above the SVG */
+  z-index: 3; /* Place text above the SVG */
   font-size: 2.3em; /* Adjust text size */
   font-weight: bold;
   color: rgb(33, 84, 108); /* Contrasting color for better visibility */
@@ -82,7 +84,6 @@ h1 {
   transform: translate(-50%, -50%);
 }
 
-
 .popup-overlay {
   display: none;
   position: fixed;
@@ -91,6 +92,7 @@ h1 {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
 }
 
 .popup-overlay.active {
@@ -182,6 +184,15 @@ h1 {
   vertical-align: bottom;
   width: 100%;
   height: auto;
+  z-index: 1;
+}
+
+.blur{
+  filter: blur(20px);
+  pointer-events: none;
+  user-select: none;
+  transition: filter 0.3s ease; 
+  z-index: 998;
 }
 
 
