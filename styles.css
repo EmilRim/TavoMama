@@ -1,20 +1,21 @@
-        body {
-            background: linear-gradient(#3e5964 0%, #566c75 25%, #77878e 50%);
-            font-family: "Anonymous Pro", monospace;
-            font-size: 24px;
-            margin: 0;
-            padding: 0;
-            justify-content: flex-start;
-        }
+body {
 
-        h1 {
-            font-family: "Krona One", sans-serif;
-            font-size: 64px;
-            text-align: center;
-            padding-top: 40px;
-            padding-bottom: 60px;
-            color: #ffffff;
-        }
+  background: linear-gradient(#6E8D97 0%, #C3D0D5 40%, #DEE4E6 100%);
+  font-size: 24px;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  justify-content: flex-start;
+}
+
+h1 {
+  font-family: Palatino, sans-serif;
+  font-size: 84px;
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 60px;
+  color: #ffffff;
+}
 
         .grid-container {
             display: grid;
@@ -66,6 +67,7 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+            font-family: 'Courier New', monospace;
         }
 
         .popup-overlay {
