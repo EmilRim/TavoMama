@@ -79,7 +79,7 @@ h1 {
 
 
 .grid-item .bottom{
-  text-allgin: left;
+  text-align: left;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -96,6 +96,10 @@ h1 {
 }
 
 .popup-overlay.active {
+  display: block;
+}
+
+.popup.active {
   display: block;
 }
 
@@ -159,10 +163,6 @@ h1 {
   text-align: left;
 }
 
-.popup.active {
-  display: block;
-}
-
 /* Close button styling */
 .popup button {
   margin-top: 20px;
@@ -188,7 +188,7 @@ h1 {
 }
 
 .blur{
-  filter: blur(20px);
+  filter: blur(10px);
   pointer-events: none;
   user-select: none;
   transition: filter 0.3s ease; 
