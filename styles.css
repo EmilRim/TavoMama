@@ -81,7 +81,7 @@ span{
 
 
 .grid-item .bottom{
-  text-allgin: left;
+  text-align: left;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -188,4 +188,9 @@ span{
   height: auto;
 }
 
+.blur{
+  filter: blur(20px);
+  pointer-events: none;
+  user-select: none;
 
+}
