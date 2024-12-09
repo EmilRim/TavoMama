@@ -99,6 +99,7 @@ h1 {
   display: block;
 }
 
+
 .popup.active {
   display: block;
 }
@@ -139,22 +140,22 @@ h1 {
 .popup-title {
   text-align: left;
   font-size: 2.5vw; /* Adjust font size relative to viewport width */
-  max-height: 5vw;
+  max-height: 10vh;
   padding: 10px;
   text-align: left;
   margin-left: -2vw;
 }
 .popup-text {
   width: 35vw;
-  max-height: 30vw;
+  max-height: 30vh;
   overflow: hidden;  /* Hides overflowing text */
   font-size: 1.2vw;
   text-align: left;
 }
 .popup-img {
   margin-left: 5vw;
-  max-height: 15vw;
-  max-width: 17vw;
+  max-height: 20vh;
+  max-width: 25vw;
   object-fit: contain;
   text-align: left;
 }
