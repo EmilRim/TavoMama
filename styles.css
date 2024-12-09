@@ -17,182 +17,119 @@ h1 {
   color: #ffffff;
 }
 
-/* Main grid layout for buttons */
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 50px;
-  padding: 20px;
-  width: 80%; /* containers width */
-  max-width: 1000px; /* kad neissiplestu per daug */
-  height: 20em;
-  margin: 0 auto; /* sucentruoja horizontaliai */
-  justify-content: space-evenly;
-  justify-items: center;
-  align-content: space-evenly;
-  z-index: 2;
-}
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 50px;
+            padding: 20px;
+            width: 80%;
+            max-width: 1000px;
+            height: 20em;
+            margin: 0 auto;
+            justify-content: space-evenly;
+            justify-items: center;
+            align-content: space-evenly;
+        }
 
+        .grid-item button {
+            position: relative;
+            margin: auto;
+            width: 8em;
+            height: 8em;
+            border: none;
+            cursor: pointer;
+            border-radius: 50%;
+            background-color: transparent; 
+            overflow: hidden; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-/* button'o styling */
-.grid-item button {
-  position: relative;
-  margin: auto;
-  width: 8em; /* snowball dydis */
-  height: 8em;
-  border: none;
-  cursor: pointer;
-  border-radius: 50%;
-  background-color: transparent; 
-  overflow: hidden; 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+        .grid-item button img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain; 
+            z-index: 1; 
+        }
 
-}
+        .grid-item button span {
+            position: absolute;
+            z-index: 2;
+            font-size: 3em;
+            font-weight: bold;
+            color: rgb(54, 59, 78);
+            text-align: center;
+            pointer-events: none;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: 'Courier New', monospace;
+        }
 
-/* SVG style*/
-.grid-item button img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: contain; 
-  z-index: 2; 
-}
+        .popup-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
 
+        .popup-overlay.active {
+            display: block;
+        }
 
-.grid-item button span {
-  position: absolute;
-  font-family: 'Courier New', monospace;;
-  z-index: 3; /* Place text above the SVG */
-  font-size: 2.3em; /* Adjust text size */
-  font-weight: bold;
-  color: rgb(33, 84, 108); /* Contrasting color for better visibility */
-  text-align: center;
-  pointer-events: none; /* Ensure text is not clickable */
-  top: 50%; /* Center vertically */
-  left: 50%; /* Center horizontally */
-  transform: translate(-50%, -50%); /* Ensure perfect centering */
-}
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            max-width: 300px;
+            text-align: center;
+        }
 
+        .popup.active {
+            display: block;
+        }
 
-.grid-item .bottom{
-  text-allgin: left;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
+        .popup button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #dc3545;
+            font-family: "Krona One", sans-serif;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
 
-.popup-overlay {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 999;
-}
+        .popup button:hover {
+            background-color: #a71d2a;
+        }
 
-.popup-overlay.active {
-  display: block;
-}
-
-/* Popup box styling */
-.popup {
-  display: none; /* Hide by default */
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: url('popup.svg') no-repeat center center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  padding: 20px;
-  border-radius: 8px;
-  z-index: 1000;
-  
-  /* Make the popup responsive */
-  width: 80%;  /* 80% of the viewport width */
-  max-width: 600px;  /* Set a maximum width */
-  height: 75%;  /* 75% of the viewport height */
-  max-height: 500px; /* Set a maximum height */
-  
-  /* Optional: Use `min-width` and `min-height` to prevent it from being too small */
-  min-width: 300px;
-  min-height: 300px;
-}
-
-.popup-grid-container {
-  display: grid;
-  grid-template-rows: auto auto auto;
-  grid-template-columns: 1fr;
-  place-items: center;
-  min-height: 200px; /* Add minimum height */
-}
-
-.popup-title {
-  text-align: left;
-  font-size: 2.5vw; /* Adjust font size relative to viewport width */
-  max-height: 5vw;
-  padding: 10px;
-  text-align: left;
-  margin-left: -2vw;
-}
-.popup-text {
-  width: 35vw;
-  max-height: 30vw;
-  overflow: hidden;  /* Hides overflowing text */
-  font-size: 1.2vw;
-  text-align: left;
-}
-.popup-img {
-  margin-left: 5vw;
-  max-height: 15vw;
-  max-width: 17vw;
-  object-fit: contain;
-  text-align: left;
-}
-.popup-button {
-  margin-left: 2vw;
-  text-align: left;
-}
-
-.popup.active {
-  display: block;
-}
-
-/* Close button styling */
-.popup button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  background-color: #dc3545;
-  font-family: "Krona One", sans-serif;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.popup button:hover {
-  background-color: #a71d2a;
-}
-
-.trees img {
-  padding-top: 100px;
-  vertical-align: bottom;
-  width: 100%;
-  height: auto;
-  z-index: 1;
-}
-
-.blur{
-  filter: blur(20px);
-  pointer-events: none;
-  user-select: none;
-  transition: filter 0.3s ease; 
-  z-index: 998;
-}
-
-
+        .blur {
+            filter: blur(20px);
+            pointer-events: none;
+            user-select: none;
+            transition: filter 0.3s ease; 
+            z-index: 998;
+        }
+        .trees img {
+          padding-top: 100px;
+          vertical-align: bottom;
+          width: 100%;
+          height: auto;
+          z-index: 1;
+      }
