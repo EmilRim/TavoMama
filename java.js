@@ -1,10 +1,11 @@
-function togglePopup(){
-    document.getElementById("popup-1").classList.toggle("active");
+
+function openPopup(text) {
+    document.getElementById('popupText').textContent = text;
+    document.getElementById('popupOverlay').style.display = 'block';
+    document.getElementById('popup').style.display = 'block';
 }
+
 function togglePopup() {
-    const popup = document.getElementById('popup');
-    const overlay = document.getElementById('popupOverlay');
-    popup.classList.toggle('active');
-    overlay.classList.toggle('active');
-    popup.classList.toggle()
+    document.getElementById('popupOverlay').style.display = 'none';
+    document.getElementById('popup').style.display = 'none';
 }
