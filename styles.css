@@ -103,18 +103,62 @@ span{
 
 /* Popup box styling */
 .popup {
-  display: none;
+  display: none; /* Hide by default */
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: white;
+  background: url('popup.svg') no-repeat center center;
+  background-size: contain;
+  background-repeat: no-repeat;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   z-index: 1000;
-  max-width: 300px;
-  text-align: center;
+  
+  /* Make the popup responsive */
+  width: 80%;  /* 80% of the viewport width */
+  max-width: 600px;  /* Set a maximum width */
+  height: 75%;  /* 75% of the viewport height */
+  max-height: 500px; /* Set a maximum height */
+  
+  /* Optional: Use `min-width` and `min-height` to prevent it from being too small */
+  min-width: 300px;
+  min-height: 300px;
+}
+
+.popup-grid-container {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-template-columns: 1fr;
+  place-items: center;
+  min-height: 200px; /* Add minimum height */
+}
+
+.popup-title {
+  text-align: left;
+  font-size: 2.5vw; /* Adjust font size relative to viewport width */
+  max-height: 5vw;
+  padding: 10px;
+  text-align: left;
+  margin-left: -2vw;
+}
+.popup-text {
+  width: 35vw;
+  max-height: 30vw;
+  overflow: hidden;  /* Hides overflowing text */
+  font-size: 1.2vw;
+  text-align: left;
+}
+.popup-img {
+  margin-left: 5vw;
+  max-height: 15vw;
+  max-width: 17vw;
+  object-fit: contain;
+  text-align: left;
+}
+.popup-button {
+  margin-left: 2vw;
+  text-align: left;
 }
 
 .popup.active {
