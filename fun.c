@@ -33,7 +33,7 @@ int headComponents(FILE *file)
     <title>My Website</title>");
     return 0;
 }
-int body(FILE* file, char* title)
+int body(FILE *file, char *title)
 {
     fprintf(file, "<body>\n\
     <main id=\"blur\">\n");

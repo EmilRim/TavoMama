@@ -7,7 +7,7 @@ int main()
 {
     char title[255];
     printf("maine\n");
-    FILE* file = openFile("test.html");
+    FILE *file = openFile("test.html");
     headComponents(file);
     fprintf(file, "\n  </head>");
     printf("kokio title nori?\n");
@@ -16,9 +16,16 @@ int main()
 
     fprintf(file, "\n</main>\n</body>");
     fprintf(file, "\n</html>");
-    //kintamieji
+    fclose(file);
 
-    //main'o programa
-    
+    // Open the HTML file in the default browser
+#ifdef _WIN32
+    system("start test.html");
+#elif __APPLE__
+    system("open test.html");
+#else
+    system("xdg-open test.html");
+#endif
+
     return 0;
 }
